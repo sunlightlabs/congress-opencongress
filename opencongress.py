@@ -128,7 +128,7 @@ def output_amendment_patch(amdt, options):
       json.dumps(amdt, sort_keys=True, indent=2, default=utils.format_datetime),
       destpath
     )
-    Beanstalk.resilient_put({'amendment_id': amendment['amendment_id']})
+    Beanstalk.resilient_put({'amendment_id': amdt['amendment_id']})
 
 
 def patch(task_name):
